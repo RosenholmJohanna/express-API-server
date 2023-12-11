@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-API</title>
+</head>
+
+<body>
+
+    <ul action="/" method="get">
+
+        <li><em>GET /getposts</em> - Retrive all posts (whitout comments) </li><br>
+
+        <li><em>GET /getpost/:postId</em> - Retrive a specific post by its ID (path parameter), and its comments.</li><br>
+
+        <li><em>DELETE /getpost/:id/delete</em> - Delete a post (and its comments) by its ID (path parameter) </li><br>
+
+        <li><em>POST /addcomment </em> - Add comment to a post by post ID. Accepts JSON object with the format { "post_id": "", "comment": "" } </li><br>
+
+        <li><em>POST /create-user </em> Create new user  Create new user. Accepts JSON object with the format { "name": "", "username": "", "password": "" }. Username must be unique </li><br>
+
+        <li><em>POST /login</em> - Login as already existing user. Returns a token as response if loggin successful. Accepts JSON object with the format {"name": " ", "username": "", "password": ""}</li><br>
+
+        <li>🔏<em>GET /users</em> - Retrieve all users & user information. <u>Require token as authorization</u>. </li><br>
+
+        <li>🔏<em>GET /users/:id</em> - Retrieve user information based on the provided user ID (path parameter). <u>Require token as authorization</u>.</li><br>
+
+        <li>🔏<em>PUT /users/:id/change-password</em> - Change users loggin password, based on the provided user ID (path parameter). Accepts JSON object with the format { "newPassword": "" } <u>Require token as authorization</u>.</li><br>
+
+    </ul>
+
+</body>
+
+</html>
